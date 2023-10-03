@@ -1,6 +1,7 @@
 import React from "react";
 import { Link, Outlet } from "react-router-dom";
-import myImg from "../images/my-image.png";
+import myImg from "../../images/my-image.png";
+
 function About() {
   const scrollToBottom = () => {
     const bottomElement = document.getElementById("bottom");
@@ -36,7 +37,8 @@ function About() {
       </div>
       <div className="me-about">
         <div className="about-me-image">
-          <img src={myImg} alt="me" />
+          <img 
+          src={myImg} alt="me" />
         </div>
         <div className="about-me-text">
           <h2>About Me</h2>
