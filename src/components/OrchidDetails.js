@@ -1,42 +1,109 @@
-import React, { useState, useEffect } from "react";
-import { Link, useParams } from "react-router-dom";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
-function OrchidDetails({
-  orchids, // Assuming this is your array of orchids
-  handleOrchidDelete, // Your delete function for orchids
-  isEditing,
-  setIsEditing,
-  handleUpdateOrchid, // Your update function for orchids
-}) {
-  const { id } = useParams();
-  const [orchid, setOrchid] = useState({
-    name: "",
-    image: "",
-    family: "",
-    genus: "",
-    size: "",
-  });
+function OrchidForm({ addNewOrchid }) {
+  const [name, setName] = useState("");
+  const [image, setImage] = useState("");
+  const [family, setFamily] = useState("");
+  const [genus, setGenus] = useState("");
+  const [color, setColor] = useState("");
+  const [bloomingSeason, setBloomingSeason] = useState("");
+  const [origin, setOrigin] = useState("");
 
-  const [editName, setEditName] = useState("");
-  const [editImage, setEditImage] = useState("");
-  const [editFamily, setEditFamily] = useState("");
-  const [editGenus, setEditGenus] = useState("");
-  const [editSize, setEditSize] = useState("");
-  const [loading, setLoading] = useState(true);
+  const newOrchid = {
+    name: name,
+    image: image,
+    family: family,
+    genus: genus,
+    color: color,
+    bloomingSeason: bloomingSeason,
+    origin: origin,
+  };
 
-  useEffect(() => {
-    // Make an API request to fetch the individual orchid data based on the ID
-    fetch(`http://localhost:3002`)
-      .then((response) => response.json())
-      .then((data) => {
-        setOrchid(data);
-        setEditName(data.name);
-        setEditImage(data.image);
-        setEditFamily(data.family);
-        setEditGenus(data.genus);
-        setEditSize(data.size);
-        setLoading(false);
+  const navigate = useNavigate();
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    fetch("https://your-orchid-api-url.com/orchids", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(newOrchid),
+    })
+      .then((r) => r.json())
+      .then((newItem) => {
+        addNewOrchid(newItem);
+        setName("");
+        setImage("");
+        setFamily("");
+        setGenus("");
+        setColor("");
+        setBloomingSeason("");
+        setOrigin("");
+        navigate("/orchidcollection");
       });
-  }, [id]);
+  }
+
+  return (
+    <div className="orchid-form">
+      <h2>Add a new Orchid to my collection!</h2>
+      <form className="form" onSubmit={handleSubmit}>
+        <input
+          required
+          type="text"
+          name="name"
+          value={name}
+          placeholder="Orchid name"
+          onChange={(e) => setName(e.target.value)}
+        />
+        <input
+          required
+          type="text"
+          name="image"
+          value={image}
+          placeholder="Image URL"
+          onChange={(e) => setImage(e.target.value)}
+        />
+        <input
+          type="text"
+          name="family"
+          value={family}
+          placeholder="Family"
+          onChange={(e) => setFamily(e.target.value)}
+        />
+        <input
+          type="text"
+          name="genus"
+          value={genus}
+          placeholder="Genus + Species"
+          onChange={(e) => setGenus(e.target.value)}
+        />
+        <input
+          type="text"
+          name="color"
+          value={color}
+          placeholder="Color"
+          onChange={(e) => setColor(e.target.value)}
+        />
+        <input
+          type="text"
+          name="bloomingSeason"
+          value={bloomingSeason}
+          placeholder="Blooming Season"
+          onChange={(e) => setBloomingSeason(e.target.value)}
+        />
+        <input
+          type="text"
+          name="origin"
+          value={origin}
+          placeholder="Origin"
+          onChange={(e) => setOrigin(e.target.value)}
+        />
+        <button type="submit">Add Orchid</button>
+      </form>
+    </div>
+  );
 }
-export default OrchidDetails;
+
+export default OrchidForm;
