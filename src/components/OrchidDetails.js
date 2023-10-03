@@ -1,109 +1,182 @@
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { Link, useParams } from "react-router-dom";
 
-function OrchidForm({ addNewOrchid }) {
-  const [name, setName] = useState("");
-  const [image, setImage] = useState("");
-  const [family, setFamily] = useState("");
-  const [genus, setGenus] = useState("");
-  const [color, setColor] = useState("");
-  const [bloomingSeason, setBloomingSeason] = useState("");
-  const [origin, setOrigin] = useState("");
+function OrchidDetails({
+  orchids, // Assuming you have an orchids state
+  handleOrchidDelete, // Function to handle orchid deletion
+  isEditing,
+  setIsEditing,
+  handleUpdateOrchid, // Function to handle orchid updates
+}) {
+  const { id } = useParams();
+  const [orchid, setOrchid] = useState({
+    name: "",
+    image: "",
+    family: "",
+    genus: "",
+    color: "",
+    bloomingSeason: "",
+    origin: "",
+  });
 
-  const newOrchid = {
-    name: name,
-    image: image,
-    family: family,
-    genus: genus,
-    color: color,
-    bloomingSeason: bloomingSeason,
-    origin: origin,
+  const [editName, setEditName] = useState("");
+  const [editImage, setEditImage] = useState("");
+  const [editFamily, setEditFamily] = useState("");
+  const [editGenus, setEditGenus] = useState("");
+  const [editColor, setEditColor] = useState("");
+  const [editBloomingSeason, setEditBloomingSeason] = useState("");
+  const [editOrigin, setEditOrigin] = useState("");
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // Make an API request to fetch the individual orchid data based on the ID
+    fetch(`https://moviefinder-fql5.onrender.com/orchids${id}`)
+      .then((response) => response.json())
+      .then((data) => {
+        setOrchid(data);
+        setEditName(data.name);
+        setEditImage(data.image);
+        setEditFamily(data.family);
+        setEditGenus(data.genus);
+        setEditColor(data.color);
+        setEditBloomingSeason(data.bloomingSeason);
+        setEditOrigin(data.origin);
+        setLoading(false);
+      });
+  }, [id]);
+
+  function handleClick() {
+    fetch(`https://moviefinder-fql5.onrender.com/orchids${orchid.id}`, {
+      method: "DELETE",
+    });
+
+    handleOrchidDelete(orchid.id);
+  }
+
+  const editedOrchid = {
+    name: editName,
+    image: editImage,
+    family: editFamily,
+    genus: editGenus,
+    color: editColor,
+    bloomingSeason: editBloomingSeason,
+    origin: editOrigin,
   };
-
-  const navigate = useNavigate();
 
   function handleSubmit(e) {
     e.preventDefault();
-    fetch("https://your-orchid-api-url.com/orchids", {
-      method: "POST",
+    fetch(`https://moviefinder-fql5.onrender.com/orchids${orchid.id}`, {
+      method: "PATCH",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(newOrchid),
+      body: JSON.stringify(editedOrchid),
     })
       .then((r) => r.json())
-      .then((newItem) => {
-        addNewOrchid(newItem);
-        setName("");
-        setImage("");
-        setFamily("");
-        setGenus("");
-        setColor("");
-        setBloomingSeason("");
-        setOrigin("");
-        navigate("/orchidcollection");
-      });
+      .then((updatedOrchid) => handleUpdateOrchid(updatedOrchid));
+    setIsEditing((prevState) => !prevState);
+  }
+
+  if (loading) {
+    return <h2>Loading...</h2>;
   }
 
   return (
-    <div className="orchid-form">
-      <h2>Add a new Orchid to my collection!</h2>
-      <form className="form" onSubmit={handleSubmit}>
-        <input
-          required
-          type="text"
-          name="name"
-          value={name}
-          placeholder="Orchid name"
-          onChange={(e) => setName(e.target.value)}
-        />
-        <input
-          required
-          type="text"
-          name="image"
-          value={image}
-          placeholder="Image URL"
-          onChange={(e) => setImage(e.target.value)}
-        />
-        <input
-          type="text"
-          name="family"
-          value={family}
-          placeholder="Family"
-          onChange={(e) => setFamily(e.target.value)}
-        />
-        <input
-          type="text"
-          name="genus"
-          value={genus}
-          placeholder="Genus + Species"
-          onChange={(e) => setGenus(e.target.value)}
-        />
-        <input
-          type="text"
-          name="color"
-          value={color}
-          placeholder="Color"
-          onChange={(e) => setColor(e.target.value)}
-        />
-        <input
-          type="text"
-          name="bloomingSeason"
-          value={bloomingSeason}
-          placeholder="Blooming Season"
-          onChange={(e) => setBloomingSeason(e.target.value)}
-        />
-        <input
-          type="text"
-          name="origin"
-          value={origin}
-          placeholder="Origin"
-          onChange={(e) => setOrigin(e.target.value)}
-        />
-        <button type="submit">Add Orchid</button>
-      </form>
+    <div className="details">
+      {isEditing ? (
+        <div className="editMenu">
+          <button
+            className="collapse"
+            onClick={() => setIsEditing((prevState) => !prevState)}
+          >
+            <h5>
+              Cancel Edit <i className="fa-solid fa-circle-xmark"></i>
+            </h5>
+          </button>
+          <img src={orchid.image} alt="orchid" />
+          <form onSubmit={handleSubmit}>
+            <input
+              required
+              type="text"
+              name="name"
+              value={editName}
+              onChange={(e) => setEditName(e.target.value)}
+            />
+            <input
+              required
+              type="text"
+              name="image"
+              value={editImage}
+              onChange={(e) => setEditImage(e.target.value)}
+            />
+            <input
+              type="text"
+              name="family"
+              value={editFamily}
+              onChange={(e) => setEditFamily(e.target.value)}
+            />
+            <input
+              type="text"
+              name="genus"
+              value={editGenus}
+              onChange={(e) => setEditGenus(e.target.value)}
+            />
+            <input
+              type="text"
+              name="color"
+              value={editColor}
+              onChange={(e) => setEditColor(e.target.value)}
+            />
+            <input
+              type="text"
+              name="bloomingSeason"
+              value={editBloomingSeason}
+              onChange={(e) => setEditBloomingSeason(e.target.value)}
+            />
+            <input
+              type="text"
+              name="origin"
+              value={editOrigin}
+              onChange={(e) => setEditOrigin(e.target.value)}
+            />
+            <button className="edit-submit" type="submit">
+              Save
+            </button>
+          </form>
+        </div>
+      ) : (
+        <div className="orchidCard">
+          <Link to="/orchidcollection/">
+            <h5>
+              Collapse Details <i className="fa-solid fa-circle-xmark"></i>
+            </h5>
+          </Link>
+          <div className="details-image">
+            <img src={orchid?.image} alt="orchid" />
+            <div className="button-wrapper">
+              <button
+                className="edit-button"
+                onClick={() => setIsEditing((prevState) => !prevState)}
+              >
+                Edit
+              </button>
+              <button className="delete-button" onClick={handleClick}>
+                <Link to="/orchidcollection/">Delete</Link>
+              </button>
+            </div>
+          </div>
+          <div className="about-info">
+            <h3>{orchid?.name}</h3>
+            <p>Family : {orchid?.family}</p>
+            <p>Genus-Species : {orchid?.genus}</p>
+            <p>Color : {orchid?.color}</p>
+            <p>Blooming Season : {orchid?.bloomingSeason}</p>
+            <p>Origin : {orchid?.origin}</p>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
 
-export default OrchidForm;
+export default OrchidDetails;

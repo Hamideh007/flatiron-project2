@@ -16,7 +16,7 @@ function App() {
   const [isEditing, setIsEditing] = useState(false);
 
   useEffect(() => {
-    fetch("https://http://localhost:3002/orchids") // Update API URL
+    fetch("https://moviefinder-fql5.onrender.com/orchids") // Update API URL
       .then((r) => r.json())
       .then((data) => setOrchids(data));
   }, []);

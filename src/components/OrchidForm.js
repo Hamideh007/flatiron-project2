@@ -24,7 +24,7 @@ function OrchidForm({ addNewOrchid }) {
 
   function handleSubmit(e) {
     e.preventDefault();
-    fetch("http://localhost:3002", {
+    fetch("https://moviefinder-fql5.onrender.com/orchids", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
