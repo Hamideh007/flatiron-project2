@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
-import NavBar from "./components/OrchidNavBar";
+import NavBar from "./components/NavBar";
 import OrchidDetails from "./components/OrchidDetails"; 
 import About from "./components/About";
 import OrchidCollection from "./components/OrchidCollection"; 
@@ -11,12 +11,13 @@ import ContactMe from "./components/ContactMe";
 import FAQs from "./components/FAQs";
 import "./index.css";
 
+
 function App() {
   const [orchids, setOrchids] = useState([]); 
   const [isEditing, setIsEditing] = useState(false);
 
   useEffect(() => {
-    fetch("https://moviefinder-fql5.onrender.com/orchids") // Update API URL
+    fetch("https://moviefinder-fql5.onrender.com/orchids")
       .then((r) => r.json())
       .then((data) => setOrchids(data));
   }, []);
@@ -43,15 +44,15 @@ function App() {
 
   return (
     <div>
-      <NavBar />
+      <NavBar/>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route
           exact
           path="/orchidcollection/"
           element={
-            <OrchidCollection // Update component name
-              orchids={orchids} // Update variable name
+            <OrchidCollection 
+              orchids={orchids} 
               isEditing={isEditing}
               setIsEditing={setIsEditing}
             />
@@ -62,18 +63,18 @@ function App() {
           <Route path="/about/FAQs" element={<FAQs />} />
         </Route>
         <Route
-          path="/addorchid" // Update path
-          element={<OrchidForm addNewOrchid={addNewOrchid} />} // Update component name
+          path="/addorchid" 
+          element={<OrchidForm addNewOrchid={addNewOrchid} />} 
         />
         <Route
-          path={"/orchidcollection/:id"} // Update path
+          path={"/orchidcollection/:id"} 
           element={
-            <OrchidDetails // Update component name
-              orchids={orchids} // Update variable name
-              handleOrchidDelete={handleOrchidDelete} // Update function name
+            <OrchidDetails 
+              orchids={orchids} 
+              handleOrchidDelete={handleOrchidDelete} 
               isEditing={isEditing}
               setIsEditing={setIsEditing}
-              handleUpdateOrchid={handleUpdateOrchid} // Update function name
+              handleUpdateOrchid={handleUpdateOrchid} 
             />
           }
         />
