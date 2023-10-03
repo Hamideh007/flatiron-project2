@@ -244,5 +244,95 @@ a:hover {
   box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em,
     rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
 }
+/* Orchid Collection */
+
+.orchid-container {
+  padding: 1rem;
+}
+
+.orchid-container h2 {
+  text-align: center;
+  margin: 2rem 0;
+  color: white; /* Set text color to white */
+}
+
+.orchid-icon {
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+  border-radius: 50%;
+  box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+}
+
+.orchid-icon img {
+  width: 50px;
+  height: 50px;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 2rem 0;
+}
+
+li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  margin: 0 0.5rem;
+}
+
+li h5 {
+  margin-top: 1rem;
+  font-weight: lighter;
+  color: white; /* Set text color to white */
+}
+
+ul.orchid-list {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* Orchid Details */
+
+.details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.orchidCard h5 {
+  color: white; /* Set text color to white */
+  margin: 1rem 0;
+}
+
+.details-image {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 15px;
+}
+
+.details-image img {
+  max-width: 700px;
+  max-height: auto;
+  border-radius: 15px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+.editMenu img {
+  max-width: 700px;
+  max-height: auto;
+  border-radius: 15px;
+}
 
  
