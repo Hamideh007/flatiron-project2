@@ -51,7 +51,7 @@ a:hover {
 .navWrapper {
   width: 100%;
   height: 80px;
-  background-color: #609966;
+  background-color:rgb(224, 100, 195);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -63,11 +63,11 @@ a:hover {
 }
 
 .logo a {
-  color: #40513B
+  color: #c564ad
 }
 
 .navigation a.active_link {
-  color: #40513B;
+  color: #6d0b68;
   background-color: #EDF1D6;
   padding: .5rem;
   border-radius: 15px;
