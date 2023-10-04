@@ -1,6 +1,5 @@
-import React from "react";
 import { Link, Outlet } from "react-router-dom";
-import myImg from "../images/my-image.png";
+import myImg from '../assets/myImg.jpg';
 
 function About() {
   const scrollToBottom = () => {
