@@ -5,7 +5,7 @@
 }
 
 body {
-    background-color: #ffff;
+    background-color: #fcfcfc;
 }
 
 /* Home */
@@ -70,7 +70,7 @@ a:hover {
 }
 
 .logo a {
-    color: #471647;
+    color: #cdb5cd;
 }
 
 .navigation a.active_link {
@@ -253,7 +253,7 @@ a:hover {
 .orchid-container h2 {
   text-align: center;
   margin: 2rem 0;
-  color: white; /* Set text color to white */
+  color: white; 
 }
 
 .orchid-icon {
@@ -334,6 +334,104 @@ ul.orchid-list {
   max-height: auto;
   border-radius: 15px;
 }
+.editMenu img {
+  max-width: 700px;
+  max-height: auto;
+  border-radius: 15px;
+}
+
+.button-wrapper {
+  margin-bottom: 1rem;
+}
+
+.button-wrapper button {
+  margin: 1rem;
+  width: 100px;
+}
+
+.button-wrapper .edit-button {
+  margin-top: 1.5rem;
+  background: orange;
+  border-radius: 28px; /* Added missing unit (px) */
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 1rem;
+  padding: 10px 20px; /* Removed extra padding values */
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.button-wrapper .delete-button {
+  margin-top: 1.5rem;
+  background: red;
+  border-radius: 28px; /* Added missing unit (px) */
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 1rem;
+  padding: 10px 20px; /* Removed extra padding values */
+  text-decoration: none;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.button-wrapper .delete-button a {
+  text-decoration: none;
+  color: white;
+}
+
+.button-wrapper .edit-button:hover {
+  background: rgb(159, 103, 0);
+  text-decoration: none;
+  box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+}
+
+.button-wrapper .delete-button:hover {
+  background: rgb(140, 0, 0);
+  text-decoration: none;
+  box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+}
+
+.about-info h3, .about-info p {
+  margin: 1rem 0;
+}
+
+/* Edit Menu */
+.editMenu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.editMenu:first-child {
+  align-items: start;
+}
+
+.editMenu h5 {
+  padding: 1rem 0;
+}
+
+.editMenu .collapse {
+  background-color: white;
+  border: none;
+  color: #40513B;
+  font-size: 1rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: light;
+}
+
+.editMenu .collapse:hover {
+  text-decoration: underline;
+}
+
+.editMenu form {
+  width: 100%;
+}
+
+
 
 
  
