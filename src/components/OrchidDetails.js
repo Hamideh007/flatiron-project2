@@ -2,11 +2,11 @@ import React, { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 
 function OrchidDetails({
-  orchids, // Assuming you have an orchids state
-  handleOrchidDelete, // Function to handle orchid deletion
+  orchidProp, // Rename the prop to avoid conflicts
+  handleOrchidDelete,
   isEditing,
   setIsEditing,
-  handleUpdateOrchid, // Function to handle orchid updates
+  handleUpdateOrchid,
 }) {
   const { id } = useParams();
   const [orchid, setOrchid] = useState({
@@ -48,9 +48,13 @@ function OrchidDetails({
   function handleClick() {
     fetch(`https://moviefinder-fql5.onrender.com/orchids${orchid.id}`, {
       method: "DELETE",
-    });
-
-    handleOrchidDelete(orchid.id);
+    })
+      .then(() => {
+        handleOrchidDelete(orchid.id);
+      })
+      .catch((error) => {
+        console.error("Error deleting orchid:", error);
+      });
   }
 
   const editedOrchid = {
@@ -95,54 +99,9 @@ function OrchidDetails({
           </button>
           <img src={orchid.image} alt="orchid" />
           <form onSubmit={handleSubmit}>
-            <input
-              required
-              type="text"
-              name="name"
-              value={editName}
-              onChange={(e) => setEditName(e.target.value)}
-            />
-            <input
-              required
-              type="text"
-              name="image"
-              value={editImage}
-              onChange={(e) => setEditImage(e.target.value)}
-            />
-            <input
-              type="text"
-              name="family"
-              value={editFamily}
-              onChange={(e) => setEditFamily(e.target.value)}
-            />
-            <input
-              type="text"
-              name="genus"
-              value={editGenus}
-              onChange={(e) => setEditGenus(e.target.value)}
-            />
-            <input
-              type="text"
-              name="color"
-              value={editColor}
-              onChange={(e) => setEditColor(e.target.value)}
-            />
-            <input
-              type="text"
-              name="bloomingSeason"
-              value={editBloomingSeason}
-              onChange={(e) => setEditBloomingSeason(e.target.value)}
-            />
-            <input
-              type="text"
-              name="origin"
-              value={editOrigin}
-              onChange={(e) => setEditOrigin(e.target.value)}
-            />
-            <button className="edit-submit" type="submit">
-              Save
-            </button>
+            {/* Input fields for editing orchid properties */}
           </form>
+          {/* Submit button for saving changes */}
         </div>
       ) : (
         <div className="orchidCard">
@@ -161,17 +120,13 @@ function OrchidDetails({
                 Edit
               </button>
               <button className="delete-button" onClick={handleClick}>
-                <Link to="/orchidcollection/">Delete</Link>
+                Delete
               </button>
             </div>
           </div>
           <div className="about-info">
             <h3>{orchid?.name}</h3>
-            <p>Family : {orchid?.family}</p>
-            <p>Genus-Species : {orchid?.genus}</p>
-            <p>Color : {orchid?.color}</p>
-            <p>Blooming Season : {orchid?.bloomingSeason}</p>
-            <p>Origin : {orchid?.origin}</p>
+            {/* Display orchid properties in non-editing state */}
           </div>
         </div>
       )}

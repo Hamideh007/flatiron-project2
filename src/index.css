@@ -430,6 +430,120 @@ ul.orchid-list {
 .editMenu form {
   width: 100%;
 }
+/* Styles for screens with a maximum width of 425px (mobile devices) */
+@media only screen and (max-width: 425px) {
+  /* Center the content in a column layout within .hero-section */
+  .hero-section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+  }
+
+  /* Adjust the font size and margin of h1 for smaller screens */
+  .hero-section h1 {
+      font-size: 2rem;
+      margin: 1.5rem;
+  }
+
+  /* Limit the max-width of images within .hero-section and .home-container */
+  .hero-section img {
+      max-width: 300px;
+  }
+  .home-container img {
+      max-width: 350px;
+  }
+
+  /* Center the content in a column layout within ul.bonsai-list */
+  ul.bonsai-list {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+  }
+
+  /* Set a fixed width and height for bonsai icons and related images */
+  .bonsai-container .bonsai-icon,
+  .bonsai-container .bonsai-icon img,
+  .about .me-about img,
+  .about .bonsai-about img {
+      width: 200px;
+      height: 200px;
+  }
+
+  /* Adjust the font size for li elements within .bonsai-container */
+  .bonsai-container li h5 {
+      font-size: 1rem;
+  }
+
+  /* Add margin to li elements within .bonsai-container */
+  .bonsai-container li {
+      margin-bottom: 1.5rem;
+  }
+
+  /* Center the content in a column layout within .about .me-about and .about .bonsai-about */
+  .about .me-about,
+  .about .bonsai-about {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+  }
+
+  /* Ensure form width is 100% for responsiveness */
+  .bonsai-form form {
+      width: 100%;
+  }
+
+  /* Limit the max-width of images within .editMenu and .bonsaiCard */
+  .editMenu img,
+  .bonsaiCard img {
+      max-width: 300px;
+  }
+}
+
+/* Styles for screens with a maximum width of 768px (tablet) */
+@media only screen and (max-width: 768px) {
+  /* Display the burger icon */
+  .burger {
+      display: block;
+  }
+
+  /* Show the navigation menu when the burger icon is clicked */
+  .navigation.show {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 80px;
+      right: 0;
+      width: 100%;
+      background-color: #609966;
+      padding: 2rem;
+      transition: transform 0.4s ease-in-out;
+      transform: translateY(-100%);
+      flex-wrap: wrap;
+      align-content: flex-start;
+      align-items: flex-start;
+  }
+
+  /* Move the menu into view by resetting the transform */
+  .navigation.show.show {
+      transform: translateY(0);
+  }
+
+  /* Hide the menu when it's not shown */
+  .navigation:not(.show) {
+      display: none;
+  }
+
+  /* Additional adjustments for better mobile menu experience */
+  .navigation a {
+      margin: 10px 0; /* Add vertical spacing between links */
+      padding: 1rem; /* Increase padding for larger clickable area */
+      text-align: center; /* Center-align the text */
+      font-size: 1.2rem; /* Increase font size for better readability */
+  }
+}
 
 
 
