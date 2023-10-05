@@ -1,5 +1,6 @@
 import { Link, Outlet } from "react-router-dom";
 import myImg from '../assets/myImg.jpg';
+import orchidImg from '../assets/img2.jpg';
 
 function About() {
   const scrollToBottom = () => {
@@ -29,9 +30,7 @@ function About() {
         </div>
         <div className="about-orchid-image">
           <img
-            src="https://your-orchid-image-url.com"
-            alt="orchid"
-          />
+             src={orchidImg} alt="orchid" />
         </div>
       </div>
       <div className="me-about">
