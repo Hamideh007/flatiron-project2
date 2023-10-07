@@ -11,36 +11,49 @@ body {
 /* Home */
 
 .home-container {
-    padding: 10%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: left;
+  padding: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
 }
 
 .home-container h2,
 .home-container h3,
 .home-container p {
-    margin: 1rem 0;
+  margin: 1rem 0;
+}
+
+.home-container h1,
+.home-container h2,
+.home-container h3 {
+  color: #c53dca; 
+  font-size: 1.5rem; 
 }
 
 .hero-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .hero-section h1 {
-    font-size: 3rem;
-    margin: 1rem 0;
-    color: #c53dca;
+  font-size: 3rem;
+  margin: 1rem 0;
+  color: #c53dca;
 }
 
 .home-container ol li {
-    width: 100%;
+  width: 100%;
 }
 
+.orchid-image {
+  border-radius: 20px;
+  width: 300px; 
+  height: auto; 
+  overflow: hidden; 
+}
 /* Nav */
 
 a {
@@ -221,7 +234,7 @@ a:hover {
 .orchid-form button,
 .editMenu .edit-submit {
   margin-top: 1.5rem;
-  background: #ff69b4; /* Pink color */
+  background: #ff69b4;
   -webkit-border-radius: 28;
   -moz-border-radius: 28;
   border-radius: 28px;
@@ -239,7 +252,7 @@ a:hover {
 
 .orchid-form button:hover,
 .editMenu .edit-submit:hover {
-  background: #800080; /* Purple color */
+  background: #800080; 
   text-decoration: none;
   box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em,
     rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
@@ -290,7 +303,7 @@ li {
 li h5 {
   margin-top: 1rem;
   font-weight: lighter;
-  color: white; /* Set text color to white */
+  color: white; 
 }
 
 ul.orchid-list {
@@ -309,7 +322,7 @@ ul.orchid-list {
 }
 
 .orchidCard h5 {
-  color: white; /* Set text color to white */
+  color: white; 
   margin: 1rem 0;
 }
 
@@ -352,11 +365,11 @@ ul.orchid-list {
 .button-wrapper .edit-button {
   margin-top: 1.5rem;
   background: orange;
-  border-radius: 28px; /* Added missing unit (px) */
+  border-radius: 28px; 
   font-family: Arial;
   color: #ffffff;
   font-size: 1rem;
-  padding: 10px 20px; /* Removed extra padding values */
+  padding: 10px 20px; 
   text-decoration: none;
   cursor: pointer;
   border: none;
@@ -366,11 +379,11 @@ ul.orchid-list {
 .button-wrapper .delete-button {
   margin-top: 1.5rem;
   background: red;
-  border-radius: 28px; /* Added missing unit (px) */
+  border-radius: 28px; 
   font-family: Arial;
   color: #ffffff;
   font-size: 1rem;
-  padding: 10px 20px; /* Removed extra padding values */
+  padding: 10px 20px; 
   text-decoration: none;
   border: none;
   box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;

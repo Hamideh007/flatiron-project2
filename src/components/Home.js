@@ -1,8 +1,8 @@
 import React from "react";
-import img1 from "../assets/img1.jpg";
-import img2 from "../assets/img2.jpg";
-import img3 from "../assets/img3.jpg";
-import img4 from "../assets/img4.jpg";
+import img1 from "../assets/img1.jpg"; // Updated image file names
+import img5 from "../assets/img5.jpg"; // Updated image file names
+import img3 from "../assets/img3.jpg"; // Updated image file names
+import img6 from "../assets/img6.jpg"; // Updated image file names
 
 function Home() {
   return (
@@ -18,8 +18,8 @@ function Home() {
         </div>
         <div className="hero-img">
           <img
-            className="orchid-image" // Apply the orchid-image class here
-            src={img1}
+            className="orchid-image"
+            src={img5} // Updated image file name
             alt="Orchid Garden"
           />
         </div>
@@ -27,8 +27,8 @@ function Home() {
       <h2>Orchid Care Essentials</h2>
       <h3>Discover Different Orchid Varieties</h3>
       <img
-        className="orchid-image" // Apply the orchid-image class here
-        src={img2}
+        className="orchid-image"
+        src={img6} // Updated image file name
         alt="Orchid Varieties"
       />
       <p>
@@ -42,8 +42,8 @@ function Home() {
       </p>
       <h3>Caring for Your Orchids</h3>
       <img
-        className="orchid-image" // Apply the orchid-image class here
-        src={img3}
+        className="orchid-image"
+        src={img3} // Updated image file name
         alt="Orchid Care"
       />
       <p>
@@ -57,8 +57,8 @@ function Home() {
       </p>
       <h3>Create Your Orchid Haven</h3>
       <img
-        className="orchid-image" // Apply the orchid-image class here
-        src={img4}
+        className="orchid-image"
+        src={img1} // Updated image file name
         alt="Orchid Haven"
       />
       <p>
@@ -75,5 +75,3 @@ function Home() {
 }
 
 export default Home;
-
-  
