@@ -1,70 +1,35 @@
-# Getting Started with Create React App
+# My Orchid Garden
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to the Orchid Garden, where you can explore the enchanting world of orchids, learn about different orchid varieties,and create your own orchid haven. This website is dedicated to the beauty and wonder of orchids, curated by Hamideh Rahmani for flatiron phase2 project Assignment .
 
-## Available Scripts
+## Description:
 
-In the project directory, you can run:
+Orchid Garden is a web application dedicated to the enchanting world of orchids. It allows users to explore a diverse collection of orchids, access detailed information about each orchid, and manage their own orchid collection.
 
-### `npm start`
+## Features:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Discover a wide variety of orchids with stunning images and detailed descriptions.
+- Learn about orchid care and cultivation to help your orchids thrive.
+- Create your own orchid collection, add new orchids, and manage existing ones.
+- Edit orchid details to keep your collection up-to-date.
+- Delete orchids from your collection when needed.
+- Navigate through the menu to access different sections of the website.
+- Explore general information about orchids .
+- Get in touch or find answers to frequently asked questions.
+- Enjoy a seamless user experience with smooth navigation and interactive features.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Contributing
 
-### `npm test`
+Contributions to the Orchid Garden website are welcome! If you'd like to contribute, please follow these guidelines:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Pull requests are welcome for review.
+- While we appreciate contributions, please refrain from making major changes without discussing them first.
 
-### `npm run build`
+If you have any questions or ideas for improvements, feel free to reach out to us. We value your input and look forward to working together to enhance the Orchid Garden website.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Licence:
+Licensing is not being offered at this time. For any questions, please reach out to our support team.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Support
+ For any questions or support, please reach out to Rahmani.mahtab@gmail.com.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
