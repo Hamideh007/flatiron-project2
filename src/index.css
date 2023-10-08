@@ -84,16 +84,16 @@ a:hover {
 }
 
 .navWrapper a {
-    color: #E9D7E9;
+    color: #e8d4e8;
 }
 
 .logo a {
-    color: #cdb5cd;
+    color: #e7e3e7;
 }
 
 .navigation a.active_link {
-    color: #755875;
-    background-color: #E9D7E9;
+    color: #faf8fa;
+    background-color: #892489;
     padding: .5rem;
     border-radius: 15px;
 }
@@ -121,7 +121,7 @@ a:hover {
 }
 
 .about p {
-    color: #716B6B;
+    color: #4a4747;
 }
 
 .about h2 {
@@ -187,7 +187,7 @@ a:hover {
 .contact-me-links a {
     font-size: 3rem;
     margin: 1rem;
-    color: #755875;
+    color: #70186a;
 }
 
 .contact-me h3 {
@@ -222,6 +222,7 @@ a:hover {
   margin: 0.5rem 0;
   padding: 0.5rem;
   border-radius: 25px;
+  background:#eee;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   border: none;
   outline: none;
@@ -233,18 +234,18 @@ a:hover {
 
 .orchid-form h2 {
   margin: 2rem;
-  color: white; /* Set the text color to white */
+  color: rgb(142, 36, 137); 
 }
 
 .orchid-form button,
 .editMenu .edit-submit {
   margin-top: 1.5rem;
-  background: #ff69b4;
+  background: #eb45c4;
   -webkit-border-radius: 28;
   -moz-border-radius: 28;
   border-radius: 28px;
   font-family: Arial;
-  color: white; /* Text color is white */
+  color: rgb(8, 8, 8); 
   font-size: 20px;
   padding: 10px 20px 10px 20px;
   text-decoration: none;
@@ -265,13 +266,15 @@ a:hover {
 /* Orchid Collection */
 
 .orchid-container {
-  padding: 1rem;
+  padding: 2rem;
 }
 
 .orchid-container h2 {
   text-align: center;
-  margin: 2rem 0;
-  color: white; 
+  margin: 4rem 0;
+  color: rgb(142, 36, 137); 
+   font-size: 3rem;
+  font-weight: 700;
 }
 
 .orchid-icon {
@@ -279,7 +282,7 @@ a:hover {
   height: 50px;
   overflow: hidden;
   border-radius: 50%;
-  box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+  box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(108, 89, 89, 0.8) -6px -2px 16px 0px;
 }
 
 .orchid-icon img {
@@ -302,13 +305,12 @@ li {
   justify-content: center;
   align-items: center;
   width: 100px;
-  margin: 0 0.5rem;
+  margin:0.5rem;
 }
 
 li h5 {
   margin-top: 1rem;
   font-weight: lighter;
-  color: white; 
 }
 
 ul.orchid-list {
@@ -327,7 +329,7 @@ ul.orchid-list {
 }
 
 .orchidCard h5 {
-  color: white; 
+  color: rgb(69, 15, 45); 
   margin: 1rem 0;
 }
 
@@ -352,14 +354,8 @@ ul.orchid-list {
   max-height: auto;
   border-radius: 15px;
 }
-.editMenu img {
-  max-width: 700px;
-  max-height: auto;
-  border-radius: 15px;
-}
-
 .button-wrapper {
-  margin-bottom: 1rem;
+  margin-bottom: 1.rem;
 }
 
 .button-wrapper button {
@@ -369,12 +365,14 @@ ul.orchid-list {
 
 .button-wrapper .edit-button {
   margin-top: 1.5rem;
-  background: orange;
+  background: rgb(255, 165, 0);
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
   border-radius: 28px; 
   font-family: Arial;
   color: #ffffff;
   font-size: 1rem;
-  padding: 10px 20px; 
+  padding: 10px 20px 10px 20px;
   text-decoration: none;
   cursor: pointer;
   border: none;
@@ -384,11 +382,13 @@ ul.orchid-list {
 .button-wrapper .delete-button {
   margin-top: 1.5rem;
   background: red;
-  border-radius: 28px; 
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
   font-family: Arial;
   color: #ffffff;
   font-size: 1rem;
-  padding: 10px 20px; 
+  padding: 10px 20px 10px 20px;
   text-decoration: none;
   border: none;
   box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
@@ -406,7 +406,7 @@ ul.orchid-list {
 }
 
 .button-wrapper .delete-button:hover {
-  background: rgb(140, 0, 0);
+  background: rgb(224, 44, 44);
   text-decoration: none;
   box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
 }
@@ -434,7 +434,7 @@ ul.orchid-list {
 .editMenu .collapse {
   background-color: white;
   border: none;
-  color: #40513B;
+  color: #8b4565;
   font-size: 1rem;
   text-transform: uppercase;
   cursor: pointer;
@@ -448,83 +448,109 @@ ul.orchid-list {
 .editMenu form {
   width: 100%;
 }
-/* Styles for screens with a maximum width of 425px (mobile devices) */
+@media only screen and (max-width: 768px) {
+  .hero-section img {
+      max-width: 300px;
+  }
+  .hero-section h1 {
+      font-size: 2rem;
+      margin: 1rem 0;
+  }
+  .home-container img {
+      max-width: 450px;
+  }
+  .home-container {
+      padding: 2rem;
+  }
+}
+
 @media only screen and (max-width: 425px) {
-  /* Center the content in a column layout within .hero-section */
   .hero-section {
       display: flex;
       justify-content: center;
       align-items: center;
       flex-direction: column;
   }
-
-  /* Adjust the font size and margin of h1 for smaller screens */
   .hero-section h1 {
       font-size: 2rem;
       margin: 1.5rem;
   }
-
-  /* Limit the max-width of images within .hero-section and .home-container */
   .hero-section img {
       max-width: 300px;
   }
   .home-container img {
       max-width: 350px;
   }
-
-  /* Center the content in a column layout within ul.bonsai-list */
-  ul.bonsai-list {
+ 
+  ul.orchid-list {
       display: flex;
       justify-content: center;
       align-items: center;
       flex-direction: column;
   }
 
-  /* Set a fixed width and height for bonsai icons and related images */
-  .bonsai-container .bonsai-icon,
-  .bonsai-container .bonsai-icon img,
+  .orchid-container .orchid-icon,
+  .orchid-container .orchid-icon img,
   .about .me-about img,
-  .about .bonsai-about img {
+  .about .orchid-about img {
       width: 200px;
       height: 200px;
   }
-
-  /* Adjust the font size for li elements within .bonsai-container */
-  .bonsai-container li h5 {
+  .orchid-container li h5 {
       font-size: 1rem;
   }
-
-  /* Add margin to li elements within .bonsai-container */
-  .bonsai-container li {
+  .orchid-container li {
       margin-bottom: 1.5rem;
   }
 
-  /* Center the content in a column layout within .about .me-about and .about .bonsai-about */
   .about .me-about,
-  .about .bonsai-about {
+  .about .orchid-about {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
   }
 
-  /* Ensure form width is 100% for responsiveness */
-  .bonsai-form form {
+ 
+  .orchid-form form {
       width: 100%;
   }
 
-  /* Limit the max-width of images within .editMenu and .bonsaiCard */
   .editMenu img,
-  .bonsaiCard img {
+  .orchidCard img {
       max-width: 300px;
   }
 }
 
-/* Styles for screens with a maximum width of 768px (tablet) */
+.burger {
+  display: none; /* Hide the burger icon by default */
+  cursor: pointer;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: #efe7ec;
+  margin: 4px 0;
+  transition: 0.4s;
+}
+
+/* Rotate the bars and change position when menu is open */
+.burger.open .bar:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 6px);
+}
+
+.burger.open .bar:nth-child(2) {
+  opacity: 0; /* Hide the middle bar */
+}
+
+.burger.open .bar:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -6px);
+}
+
 @media only screen and (max-width: 768px) {
-  /* Display the burger icon */
   .burger {
-      display: block;
+      display: block; /* Display the burger icon */
   }
 
   /* Show the navigation menu when the burger icon is clicked */
@@ -535,7 +561,7 @@ ul.orchid-list {
       top: 80px;
       right: 0;
       width: 100%;
-      background-color: #609966;
+      background-color: #e872bd;
       padding: 2rem;
       transition: transform 0.4s ease-in-out;
       transform: translateY(-100%);
@@ -543,27 +569,23 @@ ul.orchid-list {
       align-content: flex-start;
       align-items: flex-start;
   }
-
+  
   /* Move the menu into view by resetting the transform */
   .navigation.show.show {
       transform: translateY(0);
   }
-
+  
   /* Hide the menu when it's not shown */
   .navigation:not(.show) {
       display: none;
   }
 
-  /* Additional adjustments for better mobile menu experience */
-  .navigation a {
-      margin: 10px 0; /* Add vertical spacing between links */
-      padding: 1rem; /* Increase padding for larger clickable area */
-      text-align: center; /* Center-align the text */
-      font-size: 1.2rem; /* Increase font size for better readability */
-  }
+      /* Additional adjustments for better mobile menu experience */
+      .navigation a {
+          margin: 10px 0; /* Add vertical spacing between links */
+          padding: 1rem; /* Increase padding for larger clickable area */
+          text-align: center; /* Center-align the text */
+          font-size: 1.2rem; /* Increase font size for better readability */
+      }
+
 }
-
-
-
-
- 

@@ -30,7 +30,7 @@ function OrchidDetails({
 
   useEffect(() => {
     // Make an API request to fetch the individual orchid data based on the ID
-    fetch(`https://moviefinder-fql5.onrender.com/orchids${id}`)
+    fetch(`https://moviefinder-fql5.onrender.com/orchids/${id}`)
       .then((response) => response.json())
       .then((data) => {
         setOrchid(data);
@@ -46,7 +46,7 @@ function OrchidDetails({
   }, [id]);
 
   function handleClick() {
-    fetch(`https://moviefinder-fql5.onrender.com/orchids${orchid.id}`, {
+    fetch(`https://moviefinder-fql5.onrender.com/orchids/ ${orchid.id}`, {
       method: "DELETE",
     });
    handleOrchidDelete(orchid.id);
@@ -63,7 +63,7 @@ function OrchidDetails({
 
   function handleSubmit(e) {
     e.preventDefault();
-    fetch(`https://moviefinder-fql5.onrender.com/orchids${orchid.id}`, {
+    fetch(`https://moviefinder-fql5.onrender.com/orchids/${orchid.id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",

@@ -16,10 +16,10 @@ function About() {
         <div className="about-orchid-text">
           <h2>About the World of Orchids</h2>
           <p>
-            Orchids are a diverse and fascinating group of flowering plants
-            known for their stunning and unique blooms. With over 25,000
-            species, orchids can be found in nearly every corner of the world,
-            from lush rainforests to arid deserts.
+            Orchids are a diverse and fascinating group offlowering plants
+            known for their stunning and unique blooms.With over 25,000species,
+            orchids can be found in nearly every corner of the world,from 
+            lush rainforests to arid deserts.
           </p>
           <p>
             As a plant biologist with a Ph.D. in plant biology, I've dedicated
@@ -45,7 +45,8 @@ function About() {
             exploration and cultivation. Through this platform, I invite you to
             explore the enchanting world of orchids with me.
           </p>
-          <p>Discover unique orchid varieties and share your own orchid stories!</p>
+          <p>Discover unique orchid varieties
+            and share your own orchid stories!</p>
         </div>
       </div>
       <div className="about-links">
