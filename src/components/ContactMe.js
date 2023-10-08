@@ -6,10 +6,10 @@ function ContactMe() {
         <a href='https://github.com/Hamideh007' target="_blank" rel="noreferrer">
             <i className="fa-brands fa-github"></i>
           </a>
-          <a href='https://www.linkedin.com/in/mahtab-rahmani-97b9b772'
-            target="_blank" rel="noreferrer" >
-            <i className="fa-brands fa-linkedin"></i>
-          </a>
+          <a
+          href='https://www.linkedin.com/in/mahtab-rahmani-97b9b772'target="_blank" rel="noreferrer">
+          <i className="fa-brands fa-linkedin"></i>
+        </a>
           <a href="https://medium.com/@rahmani.mahtab" target="_blank" rel="noreferrer">
             <i className="fa-brands fa-medium"></i>
           </a>
