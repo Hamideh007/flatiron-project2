@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link,useNavigate } from "react-router-dom";
 
 function OrchidCollection({ orchids, setIsEditing, isEditing }) {
   const navigate = useNavigate();
@@ -30,4 +30,3 @@ function OrchidCollection({ orchids, setIsEditing, isEditing }) {
 }
 
 export default OrchidCollection;
-

@@ -46,7 +46,7 @@ function OrchidDetails({
   }, [id]);
 
   function handleClick() {
-    fetch(`https://moviefinder-fql5.onrender.com/orchids/ ${orchid.id}`, {
+    fetch(`https://moviefinder-fql5.onrender.com/orchids/${orchid.id}`, {
       method: "DELETE",
     });
    handleOrchidDelete(orchid.id);
