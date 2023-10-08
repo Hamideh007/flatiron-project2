@@ -1,8 +1,8 @@
 import React from "react";
-import img1 from "../assets/img1.jpg"; // Updated image file names
-import img5 from "../assets/img5.jpg"; // Updated image file names
-import img3 from "../assets/img3.jpg"; // Updated image file names
-import img6 from "../assets/img6.jpg"; // Updated image file names
+import img1 from "../assets/img1.jpg"; 
+import img5 from "../assets/img5.jpg"; 
+import img3 from "../assets/img3.jpg"; 
+import img6 from "../assets/img6.jpg"; 
 
 function Home() {
   return (
@@ -43,7 +43,7 @@ function Home() {
       <h3>Caring for Your Orchids</h3>
       <img
         className="orchid-image"
-        src={img3} // Updated image file name
+        src={img3} 
         alt="Orchid Care"
       />
       <p>
@@ -58,7 +58,7 @@ function Home() {
       <h3>Create Your Orchid Haven</h3>
       <img
         className="orchid-image"
-        src={img1} // Updated image file name
+        src={img1} 
         alt="Orchid Haven"
       />
       <p>

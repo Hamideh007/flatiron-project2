@@ -62,7 +62,7 @@ function OrchidForm({ addNewOrchid }) {
           type="text"
           name="image"
           value={image}
-          placeholder="Image URL"
+          placeholder="Image"
           onChange={(e) => setImage(e.target.value)}
         />
         <input

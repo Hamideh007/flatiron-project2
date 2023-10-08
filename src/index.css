@@ -16,7 +16,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: left;
+  text-align: center ;
 }
 
 .home-container h2,
@@ -33,6 +33,11 @@ body {
 }
 
 .hero-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero-img {
   display: flex;
   justify-content: center;
   align-items: center;
